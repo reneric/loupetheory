@@ -16,6 +16,25 @@ get_header(); ?>
 
 <div id="primary">
 <div class="black_squares_border"></div>
+<div id="awards">
+	<?php $args = array ( 'post_type' => "awards" );
+	$custom_query = new WP_Query( $args );
+	if ( $custom_query->have_posts() ):
+	   	while ( $custom_query->have_posts() ) : $custom_query->the_post();?>
+			<a class="award" href="<?php the_field("link"); ?>" target="_blank">
+		   		<div class="inner">
+		   			<span class="icon" style="background-image:url(../images/<?php the_field('icon');?>.png);"></span>
+		   			<div class="info">
+		   				<h1><?php the_title(); ?></h1>
+		   				<div class="description">
+		   					<p><?php the_content(); ?></p>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</a>
+		<?php endwhile; ?>
+	<?php endif; ?>
+</div>
   <div id="main">
       <div id="blog_page">
       <h1 id="blog_page_header"><a href="<?php bloginfo('url'); ?>/culture">Loupe Theory <span>Blog</span></a></h1>

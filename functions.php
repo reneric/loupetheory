@@ -448,6 +448,14 @@ function twentyeleven_content_nav( $nav_id ) {
 endif; // twentyeleven_content_nav
 
 /**
+ *  Custom functions and post types
+ *
+*/
+get_template_part( '/includes/post', 'types' );
+
+
+
+/**
  * Return the URL for the first link found in the post content.
  *
  * @since Twenty Eleven 1.0

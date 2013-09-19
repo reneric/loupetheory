@@ -4585,7 +4585,29 @@ div.wpcf7-validation-errors{
     max-width: 200px;
     margin: 12px;
 }
-
+#awards{
+	width: 960px;
+	margin: 0 auto;
+}
+#awards .award {
+	width: 220px;
+	height: 138px;
+	display: block;
+}
+#awards .award .inner {
+	background-color: rgba(60,179,203,0.89)
+}
+#awards .award .inner span.icon {
+	width: 58px;
+	height: 69px;
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: center;
+}
+#awards .award .inner div.info {}
+#awards .award .inner div.info h1 {}
+#awards .award .inner div.info div.description {}
+#awards .award .inner div.info div.description p {}
 #our_clients h1 {
     margin-bottom: 35px;
 }
